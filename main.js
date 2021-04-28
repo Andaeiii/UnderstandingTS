@@ -15,6 +15,7 @@ var __extends = (this && this.__extends) || (function () {
 exports.__esModule = true;
 var message = 'amin man world'; //tsc main.ts --watch  //~ persist compiler..
 console.log(message);
+//then it generates a js file and you can include in your work... 
 var x = 10;
 var y = 20;
 var sum;
@@ -112,13 +113,19 @@ var Employee = /** @class */ (function () {
     function Employee(name) {
         this.employeeName = name;
     }
+    Employee.prototype.getDetails = function () {
+        return {
+            "name": this.employeeName,
+            "position": "employee"
+        };
+    };
     Employee.prototype.greet = function () {
         console.log("good morning " + this.employeeName);
     };
     return Employee;
 }());
 var emp1 = new Employee('salama..');
-console.log(emp1.employeeName);
+console.log(emp1.getDetails());
 emp1.greet();
 var Manager = /** @class */ (function (_super) {
     __extends(Manager, _super);
@@ -133,3 +140,19 @@ var Manager = /** @class */ (function (_super) {
 var mg = new Manager('Andreaa');
 mg.delegateWork();
 mg.greet();
+//lets say i want to create a new Class. .... 
+var Office = /** @class */ (function () {
+    function Office(manager) {
+        this.staffStrength = {};
+        this.manager = manager;
+    }
+    Office.prototype.fixStaffs = function () {
+        this.staffStrength = { "men": 10, "women": 20 };
+        return this.staffStrength;
+    };
+    Office.prototype.address = function () {
+        var addrstr = (this.manager) ? 'manager says' : '~~';
+        console.log(addrstr + ", That the Address is, 1 Kofo Abayomi, VI, Lagos");
+    };
+    return Office;
+}());

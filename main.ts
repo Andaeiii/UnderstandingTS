@@ -1,4 +1,5 @@
 export {}
+
 let message = 'amin man world';  //tsc main.ts --watch  //~ persist compiler..
 console.log(message);
 
@@ -133,9 +134,17 @@ profile(xp);
 class Employee {
 
     protected employeeName: string;  //only accessible withing the class... 
+    public employeeDetails:any;
 
     constructor(name:string){
         this.employeeName = name;
+    }
+
+    getDetails(){
+        return {
+            "name":this.employeeName,
+            "position": "employee"
+        };
     }
 
     greet(){
@@ -146,7 +155,7 @@ class Employee {
 
 
 let emp1 = new Employee('salama..');
-console.log(emp1.employeeName);
+console.log(emp1.getDetails());
 emp1.greet();
 
 
@@ -164,3 +173,23 @@ class Manager extends Employee{
 let mg = new Manager('Andreaa');
 mg.delegateWork();
 mg.greet();
+
+
+//lets say i want to create a new Class. .... 
+
+class Office {
+    protected staffStrength;
+    protected manager;
+    constructor(manager:Manager){
+        this.staffStrength = {};
+        this.manager = manager;
+    }
+    fixStaffs(){
+        this.staffStrength = {"men":10, "women":20};
+        return this.staffStrength;
+    }
+    address(){
+        let addrstr = (this.manager)?'manager says' : '~~';
+        console.log(`${addrstr}, That the Address is, 1 Kofo Abayomi, VI, Lagos`);
+    }
+}
