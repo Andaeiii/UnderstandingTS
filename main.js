@@ -147,7 +147,11 @@ var Office = /** @class */ (function () {
         this.manager = manager;
     }
     Office.prototype.fixStaffs = function () {
-        this.staffStrength = { "men": 10, "women": 20 };
+        this.staffStrength = {
+            "men": 10,
+            "women": 20,
+            "kids": 3
+        };
         return this.staffStrength;
     };
     Office.prototype.address = function () {

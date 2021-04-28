@@ -179,13 +179,18 @@ mg.greet();
 
 class Office {
     protected staffStrength;
+    public otherinfo:any;
     protected manager;
     constructor(manager:Manager){
         this.staffStrength = {};
         this.manager = manager;
     }
     fixStaffs(){
-        this.staffStrength = {"men":10, "women":20};
+        this.staffStrength = {
+            "men":10, 
+            "women":20,
+            "kids":3
+        };
         return this.staffStrength;
     }
     address(){
