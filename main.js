@@ -24,6 +24,8 @@ var x = 10;
 var y = 20;
 var sum;
 var title = ' aminu'; //const declarations must be assisgned... 
+
+
 //boolean, number, string ~ basic types in typestctipt.. 
 var isBeginner = true;
 var total = 0;
@@ -31,9 +33,13 @@ var name = 'vishhhh...';
 var sentence = "My name is " + name;
 var isNew = null;
 var myName = undefined;
+
+
 //ways of declaring arrays in typescript..
 var list1 = [1, 2, 3];
 var list2 = [1, 2, 3];
+
+
 //problem with tuple types... 
 //one string value and one number and must match. 
 //you cant swap or do a mixed length.. 
