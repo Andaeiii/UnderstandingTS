@@ -3,6 +3,12 @@ export {}
 let message = 'amin man world';  //tsc main.ts --watch  //~ persist compiler..
 console.log(message);
 
+let person = 'David';
+let students:Array<string> = ["david", person, "emma", "Sadiat"];
+
+let person2 = 'David Washington';
+let person3 = 'Daenery Targeryen';
+
 //then it generates a js file and you can include in your work... 
 
 let x = 10; 
@@ -12,7 +18,7 @@ let sum;
 const title = ' aminu'; //const declarations must be assisgned... 
 
 
-//boolean, number, string ~ basic types in typestctipt.. 
+//boolean, number, string ~ basic types in typestctipt.
 
 let isBeginner: boolean = true;
 let total:number = 0;
@@ -31,6 +37,8 @@ let list2:Array<number> = [1,2,3];
 //problem with tuple types... 
 //one string value and one number and must match. 
 //you cant swap or do a mixed length.. 
+
+
 let person1: [string,number] = ['chris', 22];
 
 enum Color {Red, Green, Blue}; 

@@ -15,10 +15,10 @@ var __extends = (this && this.__extends) || (function () {
 exports.__esModule = true;
 var message = 'amin man world'; //tsc main.ts --watch  //~ persist compiler..
 console.log(message);
+
 var person = 'David';
 var students = ["david", person, "emma", "Sadiat"];
-var person2 = 'David Washington';
-var person3 = 'Daenery Targeryen';
+
 //then it generates a js file and you can include in your work... 
 var x = 10;
 var y = 20;
